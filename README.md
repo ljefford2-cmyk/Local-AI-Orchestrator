@@ -59,4 +59,4 @@ MIT — use these patterns however they serve you.
 
 ## Contact
 
-Lawrence Jacob · Nahunta, Georgia
+Lawrence Jeffords · Nahunta, Georgia
