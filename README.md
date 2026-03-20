@@ -28,6 +28,16 @@ This architecture has been stress-tested through multi-model adversarial review 
 
 Adversarial reviews conducted independently by multiple frontier AI models. Cross-domain reconciliation traced nine structural findings across all implementations to separate documentation debt from architectural debt. Four resolved, four partially addressed, one genuinely new.
 
+### Build Readiness
+
+Two independent adversarial reviews — an architectural completeness 
+assessment and a runtime security threat model — have been consolidated 
+into a [Gap-Closure Checklist](docs/build-readiness/Gap_Closure_Checklist.md) 
+that defines what must be formalized before build begins. Both reviews 
+were AI-generated using the same multi-model adversarial methodology 
+documented in this repository. No external organizations participated 
+in or endorsed these reviews.
+
 ## Repository Structure
 
 ```
