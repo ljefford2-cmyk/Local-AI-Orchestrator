@@ -1,4 +1,3 @@
-
 # The Case for the Local Orchestrator
 
 **A reference architecture for local-first AI agent orchestration**
