@@ -63,14 +63,14 @@ Graduated trust, privacy-aware context packaging, immutable audit trails, and hu
 │   │   └── Case_for_the_Local_Orchestrator_v3.md  ← Pattern specification (v3)
 │   ├── adversarial-reviews/
 │   │   └── README.md                  ← Adversarial review methodology and findings
+│   ├── build-readiness/
+│   │   └── Gap_Closure_Checklist.md   ← Consolidated build-readiness assessment
 │   └── cross-domain-validation/
 │       └── README.md                  ← Gap map summary and reconciliation results
-├── proposals/
-│   └── nemoclaw/
-│       ├── README.md                  ← NemoClaw governance proposal overview
-│       └── NemoClaw_Governance_Proposals.pptx
-└── presentations/
-    └── DRNT_Architecture_Deck.pptx    ← Full architecture deck (post-reconciliation)
+└── proposals/
+    └── nemoclaw/
+        ├── README.md                  ← NemoClaw governance proposal overview
+        └── NemoClaw_Governance_Proposals.pptx
 ```
 
 **Note:** The pattern specification in this repo is v3. The current version (v5.1.1) is maintained in the [canonical repository](https://github.com/ljefford2-cmyk/local-first-ai-orchestration/blob/main/docs/the-case-for-the-local-orchestrator.md), which includes the post-adversarial reframe and all domain applications.
