@@ -1,6 +1,6 @@
-# The Case for the Local Orchestrator
+# Why You Cannot Depend on a Single AI Model
 
-**A reference architecture for local-first AI agent orchestration**
+**A Reference Architecture for Local-First AI Agent Orchestration**
 
 **Companion repository** — focused on how these governance patterns may apply to agent sandbox architectures like [NemoClaw/OpenShell](https://github.com/NVIDIA/NemoClaw).
 
@@ -20,19 +20,19 @@ This principle, and the governance patterns that follow from it, were developed 
 
 Each pattern exists because a specific adversarial scenario demanded it:
 
-**Workflow Autonomy Levels (WAL 0–3)** — Graduated trust earned through demonstrated reliability. All capabilities start at WAL-0 (human reviews everything). Promotion requires evidence. Anomalies trigger automatic demotion. v5.2 adds temporal dynamics (trust scores decay over inactivity, recent performance is weighted more heavily than historical volume) and failure-type weighting (routing errors carry less trust impact than policy violations or external damage). The result is a governance model that responds proportionally to deviation — not just binary allow/deny.
+**Context Packager** — Structural privacy gate with a defined sensitivity taxonomy, memory selection policy, and sequential audit pipeline. Cloud models never see your complete memory layer. Sensitive data is stripped by rule, not by judgment. Adversarial input handling enforces hard separation between instructions and data in every outbound payload, defending against prompt injection, malicious connector data, and memory poisoning.
 
-**Context Packager** — Structural privacy gate with a defined sensitivity taxonomy, memory selection policy, and sequential audit pipeline. Cloud models never see your complete memory layer. Sensitive data is stripped by rule, not by judgment. v5.2 adds adversarial input handling: hard separation between instructions and data in every outbound payload, defending against prompt injection, malicious connector data, and memory poisoning.
+**Execution Safety Layer** — Governs what happens when a decision becomes an action. Runtime isolation at the container level, behavioral governance via WAL, structural privacy on all outbound paths. No layer trusts another layer's enforcement. Includes a formal threat model covering malicious connectors, compromised API endpoints, tool supply-chain attacks, and sandbox escape.
 
-**Execution Safety Layer** — Governs what happens when a decision becomes an action. Network isolation at the container topology level (not firewall rules), tool sandboxing with constrained permissions, connector trust levels (read-only / write-guarded / privileged), and WAL-gated execution that inherits the trust level of the capability that triggered it. Includes a formal threat model covering malicious connectors, compromised API endpoints, tool supply-chain attacks, and sandbox escape. Added in v5.2.
+**Workflow Autonomy Levels (WAL 0–3)** — Graduated trust earned through demonstrated reliability. All capabilities start at WAL-0 (human reviews everything). Promotion requires evidence. Anomalies trigger automatic demotion. Trust scores incorporate temporal decay, recency weighting, and failure-type weighting (routing errors carry less weight than policy violations or external damage). The result is a governance model that responds proportionally to deviation — not just binary allow/deny.
 
-**Append-Only Audit Log** — Cryptographically hashed, immutable journal with two-stream separation (routing metadata + optional encrypted content). The agent cannot modify or delete its own logs. Source for all implementation metrics: local resolution rate, context reduction ratio, redaction success rate, human override frequency, retry rate, and trust demotion frequency.
+**Append-Only Audit Log** — Cryptographically hashed, immutable journal with two-stream separation (routing metadata + optional encrypted content). The agent cannot modify or delete its own logs. The log writer is a separate process — if it is down, the orchestrator halts. Source for all implementation metrics: local resolution rate, context reduction ratio, human override frequency, retry rate, and trust demotion frequency.
 
 **Job-Based UX** — Interactions are jobs, not chat sessions. Submit → Acknowledge → Process → Deliver. Jobs queue during intermittent connectivity and resume without losing state.
 
 ## Validation
 
-The architecture has been stress-tested through multi-model adversarial review (Claude, ChatGPT, Gemini, Copilot) across five implementation domains:
+The architecture has been stress-tested through multi-model adversarial review (Claude, ChatGPT, Gemini, Copilot) across multiple implementation domains:
 
 | Domain | Context | Regulatory Alignment |
 |--------|---------|---------------------|
@@ -42,7 +42,7 @@ The architecture has been stress-tested through multi-model adversarial review (
 | SMB | Six-document business adaptation framework | GLBA, attorney-client privilege |
 | Personal (DRNT) | Single-user gateway with self-imposed governance | Privacy-by-architecture — no external mandate |
 
-Cross-domain reconciliation traced nine structural findings across all implementations, separating documentation debt from architectural debt. The most significant finding: all four reviewers independently identified that the original core principle ("route, don't reason") created a structural tension with what the architecture actually does — driving the v5.0 reframe to the current principle. v5.2 was driven by a structured redline review that identified the absence of execution governance as the most significant remaining gap.
+Cross-domain reconciliation traced nine structural findings across all implementations, separating documentation debt from architectural debt. The most significant finding: all four reviewers independently identified that the original core principle ("route, don't reason") created a structural tension with what the architecture actually does — driving the reframe to the current principle. Subsequent structured redline review identified the absence of execution governance as the most significant remaining gap, leading to the Execution Safety Layer and related additions.
 
 Full validation details: [Adversarial Review Methodology](https://github.com/ljefford2-cmyk/local-first-ai-orchestration/blob/main/validation/adversarial-review-methodology.md)
 
@@ -75,7 +75,7 @@ Graduated trust, privacy-aware context packaging, immutable audit trails, and hu
         └── NemoClaw_Governance_Proposals.pptx
 ```
 
-**Note:** The pattern specification in this repo is v3. The current version (v5.2) is maintained in the [canonical repository](https://github.com/ljefford2-cmyk/local-first-ai-orchestration/blob/main/docs/the-case-for-the-local-orchestrator.md), which includes the post-adversarial reframe, Execution Safety Layer, implementation metrics, and all domain applications.
+**Note:** The pattern specification in this repo is v3. The current version (v6.0) is maintained in the [canonical repository](https://github.com/ljefford2-cmyk/local-first-ai-orchestration/blob/main/docs/why-you-cannot-depend-on-a-single-ai-model.md), which includes the full reference architecture, Execution Safety Layer, DRNT specification suite (seven interface specifications and three governance artifacts), and validation methodology.
 
 ## License
 
