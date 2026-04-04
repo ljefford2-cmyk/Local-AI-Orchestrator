@@ -4,7 +4,7 @@
 
 **Companion repository** — focused on how these governance patterns may apply to agent sandbox architectures like [NemoClaw/OpenShell](https://github.com/NVIDIA/NemoClaw).
 
-The canonical architecture is maintained at **[local-first-ai-orchestration](https://github.com/ljefford2-cmyk/local-first-ai-orchestration)**.
+The canonical architecture is maintained at **[local-first-ai-orchestration](https://github.com/ljefford2-cmyk/local-first-ai-orchestration)**. A working implementation is at **[local-first-ai-gateway](https://github.com/ljefford2-cmyk/local-first-ai-gateway)**.
 
 ---
 
