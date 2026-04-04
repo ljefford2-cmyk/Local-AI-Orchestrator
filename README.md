@@ -1,8 +1,9 @@
 # Why You Cannot Depend on a Single AI Model
 
-**A Reference Architecture for Local-First AI Agent Orchestration**
-
-**Companion repository** — focused on how these governance patterns may apply to agent sandbox architectures like [NemoClaw/OpenShell](https://github.com/NVIDIA/NemoClaw).
+> ⚠️ **Historical archive — not the current specification source.**
+> The pattern spec in this repo is v3 and has been superseded.
+> Current specs (v6.0): [local-first-ai-orchestration](https://github.com/ljefford2-cmyk/local-first-ai-orchestration)
+> Implementation: [local-first-ai-gateway](https://github.com/ljefford2-cmyk/local-first-ai-gateway) (v0.1.0)
 
 The canonical architecture is maintained at **[local-first-ai-orchestration](https://github.com/ljefford2-cmyk/local-first-ai-orchestration)**. A working implementation is at **[local-first-ai-gateway](https://github.com/ljefford2-cmyk/local-first-ai-gateway)**.
 
@@ -74,8 +75,6 @@ Graduated trust, privacy-aware context packaging, immutable audit trails, and hu
         ├── README.md                  ← NemoClaw governance proposal overview
         └── NemoClaw_Governance_Proposals.pptx
 ```
-
-**Note:** The pattern specification in this repo is v3. The current version (v6.0) is maintained in the [canonical repository](https://github.com/ljefford2-cmyk/local-first-ai-orchestration/blob/main/docs/why-you-cannot-depend-on-a-single-ai-model.md), which includes the full reference architecture, Execution Safety Layer, DRNT specification suite (seven interface specifications and three governance artifacts), and validation methodology.
 
 ## License
 
