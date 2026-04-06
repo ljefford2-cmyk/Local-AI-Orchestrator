@@ -3,7 +3,7 @@
 > ⚠️ **Historical archive — not the current specification source.**
 > The pattern spec in this repo is v3 and has been superseded.
 > Current specs (v6.0): [local-first-ai-orchestration](https://github.com/ljefford2-cmyk/local-first-ai-orchestration)
-> Implementation: [local-first-ai-gateway](https://github.com/ljefford2-cmyk/local-first-ai-gateway) (v0.1.0)
+> Implementation: [local-first-ai-gateway](https://github.com/ljefford2-cmyk/local-first-ai-gateway) (v0.2.1)
 
 The canonical architecture is maintained at **[local-first-ai-orchestration](https://github.com/ljefford2-cmyk/local-first-ai-orchestration)**. A working implementation is at **[local-first-ai-gateway](https://github.com/ljefford2-cmyk/local-first-ai-gateway)**.
 
