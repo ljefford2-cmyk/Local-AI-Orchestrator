@@ -1,5 +1,7 @@
 # Cross-Domain Validation: Gap Map Summary
 
+> **Historical note:** This document reflects the architecture at v5.1.1 — the version at the time of these cross-domain validations. The current architecture version is v7.0, maintained in the [local-first-ai-orchestration](https://github.com/ljefford2-cmyk/local-first-ai-orchestration) repository.
+
 ## Purpose
 
 Two independent adversarial reviews of the personal gateway implementation surfaced nine structural concerns. A cross-domain reconciliation traced each finding across all implementations (federal, clinical, SMB, K-12 education, personal) to determine whether the gaps were genuine architectural debt or documentation debt — answers that existed in other domains but weren't carried forward.

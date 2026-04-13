@@ -1,5 +1,7 @@
 # Adversarial Review Methodology and Findings
 
+> **Historical note:** This document reflects the architecture at v5.1.1 — the version at the time these reviews were performed. The current architecture version is v7.0, maintained in the [local-first-ai-orchestration](https://github.com/ljefford2-cmyk/local-first-ai-orchestration) repository.
+
 ## Approach
 
 Every version of this architecture has been subjected to multi-model adversarial review — not to confirm assumptions, but to find breaking conditions. The methodology uses frontier models as independent red teams, each with different training biases and failure modes.
