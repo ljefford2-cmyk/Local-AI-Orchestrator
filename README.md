@@ -66,8 +66,6 @@ Graduated trust, privacy-aware context packaging, immutable audit trails, and hu
 │   │   └── Case_for_the_Local_Orchestrator_v3.md  ← Pattern specification (v3)
 │   ├── adversarial-reviews/
 │   │   └── README.md                  ← Adversarial review methodology and findings
-│   ├── build-readiness/
-│   │   └── Gap_Closure_Checklist.md   ← Consolidated build-readiness assessment
 │   └── cross-domain-validation/
 │       └── README.md                  ← Gap map summary and reconciliation results
 └── proposals/
