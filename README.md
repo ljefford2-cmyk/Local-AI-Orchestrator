@@ -70,8 +70,7 @@ Graduated trust, privacy-aware context packaging, immutable audit trails, and hu
 │       └── README.md                  ← Gap map summary and reconciliation results
 └── proposals/
     └── nemoclaw/
-        ├── README.md                  ← NemoClaw governance proposal overview
-        └── NemoClaw_Governance_Proposals.pptx
+        └── README.md                  ← NemoClaw governance proposal overview
 ```
 
 ## License
